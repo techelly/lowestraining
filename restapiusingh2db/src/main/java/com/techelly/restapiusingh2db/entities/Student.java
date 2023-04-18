@@ -34,5 +34,6 @@ public class Student {
 	private String name;
 	@JsonFormat(pattern="dd-MM-yyyy")
 	private LocalDate dateOfBirth;
+
 	
 }
