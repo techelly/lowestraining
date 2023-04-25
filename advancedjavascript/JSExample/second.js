@@ -1,3 +1,4 @@
+//Classic way of writing function in JS
 function addition(num1,num2){
     let sum = num1+num2;
     console.log("Sum of two numbers is "+sum);
