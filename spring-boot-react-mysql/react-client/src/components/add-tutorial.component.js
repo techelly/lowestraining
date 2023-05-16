@@ -8,6 +8,58 @@ export default class AddTutorial extends Component {
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.saveTutorial = this.saveTutorial.bind(this);
     this.newTutorial = this.newTutorial.bind(this);
+   /**In function state management using hooks useState() */
+   /**
+    const [tutorial,setTutorial] = useState({
+      id: null,
+      title: "",
+      description: "", 
+      published: false,
+
+      submitted: false
+  });
+  //const[title,setTitle]=useState("");
+  const {id,title,descrption,published,submitted}=data;//destructuring
+
+  const onChangeTitle = e=>{
+    setTutorial(
+        {
+            ...tutorial,[e.target.title]: [e.target.value]
+        }
+    );
+}
+
+const onChangeDescription = e=>{
+  setTutorial(
+      {
+          ...tutorial,[e.target.description]: [e.target.value]
+      }
+  );
+
+  saveTutorial() {
+    var data = {
+      title: tutorial.title,
+      description: tutorial.description
+    };
+
+    TutorialDataService.create(data)
+      .then(response => {
+        this.setState({
+          id: response.data.id,
+          title: response.data.title,
+          description: response.data.description,
+          published: response.data.published,
+
+          submitted: true
+        });
+        console.log(response.data);
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  }
+
+} */
 
     this.state = {
       id: null,
